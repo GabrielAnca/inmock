@@ -22,6 +22,6 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request): JsonResponse
     {
-        return new JsonResponse(array('hello' => 'world'));
+        return new JsonResponse(['hello' => 'world']);
     }
 }
