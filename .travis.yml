@@ -1,8 +1,8 @@
 language: php
-dist: xenial
+dist: trusty
 php:
   - 7.1
-
 before_script:
-  - composer install --prefer-source --no-interaction --dev
+  - cp app/config/parameters.yml.dist app/config/parameters.yml
+  - composer install --no-interaction --dev
 
