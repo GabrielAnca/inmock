@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  webserver:
+    hostname: webserver
+    build:
+      context: ./infrastructure/containers/webserver
+      args:
+        user_id: 1000
+        group_id: 1000
+    image: inmock-webserver
+    volumes:
+      - .:/var/www:rw
+    networks:
+      - inmock
+    ports:
+      - 4000:80
+
+networks:
+  inmock:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.12.0.0/29
