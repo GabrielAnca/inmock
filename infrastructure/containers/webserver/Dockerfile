@@ -6,9 +6,6 @@ ARG user_id=1000
 ARG group_name="appmgmt"
 ARG group_id=1000
 
-# Enable mod rewrite
-RUN a2enmod rewrite
-
 # Create local user and add www-data user to the group to ensure apache has permissions on files
 # TODO: This mapping local user to www-data user, a temporary workaround
 RUN groupadd -g $group_id $group_name
@@ -17,6 +14,15 @@ RUN usermod -a -G $group_name www-data
 
 # Copy the .bashrc file
 COPY files/.bashrc /root/.bashrc
+
+# Copy php.ini
+COPY files/php.ini /usr/local/etc/php/php.ini
+
+# Enable xdebug
+RUN pecl install xdebug
+
+# Enable mod rewrite
+RUN a2enmod rewrite
 
 # Change default apache site
 RUN rm -rf /var/www/html
