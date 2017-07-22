@@ -1,23 +1,23 @@
 version: '3'
 
 services:
-  webserver:
-    hostname: webserver
+  webserver-dev:
+    hostname: webserver-dev
     build:
-      context: ./infrastructure/containers/webserver
+      context: ./containers/webserver-dev
       args:
         user_id: 1000
         group_id: 1000
-    image: inmock-webserver
+    image: inmock-webserver-dev
     volumes:
       - .:/var/www:rw
     networks:
-      - inmock
+      - inmock-dev
     ports:
       - 4000:80
 
 networks:
-  inmock:
+  inmock-dev:
     ipam:
       driver: default
       config:
