@@ -1,0 +1,7 @@
+serve_mock:
+    path: /{path}
+    requirements:
+        path: '.+'
+    defaults:
+        _controller: inmock.controller.mock:serveAction
+        path: ''

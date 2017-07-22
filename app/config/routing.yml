@@ -1,3 +1,2 @@
-app:
-    resource: '@InMockBundle/Controller/'
-    type: annotation
+inmock_bundle:
+    resource: '@InMockBundle/Resources/config/routing.yml'

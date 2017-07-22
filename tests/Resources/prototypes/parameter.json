@@ -1,0 +1,5 @@
+{
+  "name": "id",
+  "type": "int",
+  "pattern": "[0-9]+"
+}

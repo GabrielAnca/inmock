@@ -1,0 +1,21 @@
+parameters:
+services:
+    inmock.controller.mock:
+        class: InMockBundle\Controller\MockController
+        arguments:
+            - '@inmock.service.router'
+            - '@twig'
+
+    inmock.service.router:
+        class: InMockBundle\Service\RouterService
+        arguments:
+            - '@jms_serializer'
+            - '@validator.json_schema'
+        calls:
+            - method: addRoutesFromFile
+              arguments:
+                  - '%kernel.project_dir%/%routes_path%'
+                  - '%routes_format%'
+
+    validator.json_schema:
+        class: JsonSchema\Validator

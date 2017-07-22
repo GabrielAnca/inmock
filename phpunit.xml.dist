@@ -21,9 +21,8 @@
         <whitelist>
             <directory>src</directory>
             <exclude>
-                <directory>src/*Bundle/Resources</directory>
-                <directory>src/*/*Bundle/Resources</directory>
-                <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <directory>src/InMockBundle/Resources</directory>
+                <directory>src/InMockBundle/DependencyInjection</directory>
             </exclude>
         </whitelist>
     </filter>

@@ -1,5 +1,7 @@
 /app/config/parameters.yml
 /build/
+/mocks/*
+!mocks/routes.json.dist
 /phpunit.xml
 /var/*
 !/var/cache

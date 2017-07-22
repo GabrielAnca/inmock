@@ -6,7 +6,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Class InMockBundle
- * @package AppBundle
+ *
+ * @package InMockBundle
  */
 class InMockBundle extends Bundle
 {

@@ -1,0 +1,20 @@
+{
+  "path": "/cats/{id}",
+  "method": "get",
+  "parameters": [
+    {
+      "name": "id",
+      "type": "int"
+    }
+  ],
+  "queryParameters": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "color",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "template": "get_cat.json.twig",
+  "statusCode": 200
+}

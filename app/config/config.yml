@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: services.yml }
 
 parameters:
     locale: en
@@ -26,3 +25,7 @@ framework:
     assets: ~
     php_errors:
         log: true
+
+twig:
+    paths:
+        '%kernel.project_dir%/%templates_path%': ~

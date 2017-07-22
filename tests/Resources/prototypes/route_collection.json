@@ -1,0 +1,62 @@
+{
+  "routes": [
+    {
+      "endpoint": {
+        "path": "/cats/{id}",
+        "method": "get",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "queryParameters": [
+          {
+            "name": "color",
+            "type": "string"
+          }
+        ]
+      },
+      "strict": true,
+      "response": {
+        "template": "get_cat.json.twig",
+        "statusCode": 200
+      }
+    },
+    {
+      "endpoint": {
+        "path": "/cats/{id}",
+        "method": "post",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "queryParameters": []
+      },
+      "strict": true,
+      "response": {
+        "template": "post_cat.json.twig",
+        "statusCode": 200
+      }
+    },
+    {
+      "endpoint": {
+        "path": "/cats/{id}",
+        "method": "delete",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "int"
+          }
+        ],
+        "queryParameters": []
+      },
+      "strict": false,
+      "response": {
+        "statusCode": 204
+      }
+    }
+  ]
+}

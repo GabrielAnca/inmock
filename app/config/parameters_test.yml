@@ -1,0 +1,7 @@
+parameters:
+  secret: tests-secret
+
+  templates_path: tests/Resources/templates/
+
+  routes_path: tests/Resources/prototypes/route_collection.json
+  routes_format: json
